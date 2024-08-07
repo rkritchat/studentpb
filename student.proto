@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/rkritchat/studentpb/v1";
+
+package studentService;
+
+import "model/get.proto";
+import "google/protobuf/empty.proto";
+
+service StudentService{
+  rpc CreateAllStudent(google.protobuf.Empty) returns(model.ListStudent){};
+}
+

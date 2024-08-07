@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/rkritchat/studentpb/v1/model";
+
+package model;
+
+import "google/protobuf/timestamp.proto";
+
+message ListStudent{
+  repeated Student students = 1;
+}
+
+message Student {
+  string username = 1;
+  string studentName = 2;
+  google.protobuf.Timestamp createdAt = 3;
+  google.protobuf.Timestamp updatedAt = 4;
+}
